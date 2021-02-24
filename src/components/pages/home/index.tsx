@@ -45,6 +45,9 @@ const Home: FunctionComponent = () => {
   const accessibleReactApps: any = find(homepageData, {
     id: 'accessibleReactApps',
   })
+  const nextjsVideoApp: any = find(homepageData, {
+    id: 'nextjsVideoApp',
+  })
   const reactTeams: any = find(homepageData, {id: 'reactTeams'})
   const tailwind: any = find(homepageData, {id: 'tailwind'})
   const advancedCourse: any = find(homepageData, {id: 'advancedCourse'})
@@ -87,9 +90,12 @@ const Home: FunctionComponent = () => {
               })}
             </div>
 
+            <CardHorizontal resource={nextjsVideoApp} />
+
             <CardHorizontal resource={portfolioProject} />
 
             <CardHorizontal resource={cms} />
+
             <div className="grid xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 grid-cols-1 lg:gap-6 gap-4">
               <CardVerticalWithStack data={aws} />
               <CardVerticalWithStack
